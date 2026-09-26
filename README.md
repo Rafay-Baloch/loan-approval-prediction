@@ -1,10 +1,18 @@
 # Loan Approval Prediction System
 
-An end-to-end Machine Learning project that predicts whether a loan application is likely to be approved or rejected. The project uses Logistic Regression and provides prediction probabilities through an interactive Gradio web application.
+An end-to-end Machine Learning project that predicts whether a loan application is likely to be approved or rejected. The project uses Logistic Regression and provides prediction probabilities through an interactive Streamlit web application.
+
+## Live Application
+
+[Open the Deployed Loan Approval Prediction Application](https://rafay-loan-approval-prediction.streamlit.app)
+
+## GitHub Repository
+
+[View the Complete Project on GitHub](https://github.com/Rafay-Baloch/loan-approval-prediction)
 
 ## Project Overview
 
-Financial institutions receive many loan applications and need to evaluate applicants consistently. This project uses applicant information such as income, credit history, education, employment status, loan amount and property area to predict loan approval.
+Financial institutions receive many loan applications and need to evaluate applicants consistently. This project uses applicant information such as income, credit history, education, employment status, loan amount, and property area to predict loan approval.
 
 The target variable is `Loan_Status`:
 
@@ -53,7 +61,7 @@ The following preprocessing steps were performed:
 
 ## Exploratory Data Analysis
 
-Exploratory Data Analysis was performed using statistical summaries, relationship analysis and visualizations.
+Exploratory Data Analysis was performed using statistical summaries, relationship analysis, and visualizations.
 
 ### Important Observations
 
@@ -118,16 +126,21 @@ The model achieved a high recall of 97.65%, which means it successfully identifi
 
 ## Loan Prediction Application
 
-An interactive user interface was developed using Gradio. The application allows users to enter applicant information and receive:
+An interactive user interface was developed using Streamlit. The application allows users to enter applicant information and receive:
 
 - Loan approval or rejection prediction
 - Approval probability
 - Rejection probability
 - Probability-based explanation
+- Visual comparison of approval and rejection probabilities
 
 The trained Logistic Regression pipeline is stored in:
 
 `loan_approval_logistic_model.pkl`
+
+The deployed application is available at:
+
+https://rafay-loan-approval-prediction.streamlit.app
 
 ## Application Test Cases
 
@@ -191,11 +204,12 @@ The third unseen applicant was predicted as approved.
 - Scikit-learn
 - Matplotlib
 - Seaborn
-- Gradio
+- Streamlit
 - Joblib
 - Google Colab
 - Git
 - GitHub
+- Streamlit Community Cloud
 
 ## Project Structure
 
@@ -235,13 +249,29 @@ Install the required Python libraries:
 pip install -r requirements.txt
 ```
 
-Run the Gradio application:
+Run the Streamlit application:
 
 ```bash
-python app.py
+streamlit run app.py
 ```
 
-After running the command, open the local Gradio URL displayed in the terminal.
+After running the command, the application will open in a web browser. If it does not open automatically, use the local URL displayed in the terminal.
+
+## Deployment
+
+The application was deployed using Streamlit Community Cloud.
+
+Deployment configuration:
+
+- Repository: `Rafay-Baloch/loan-approval-prediction`
+- Branch: `main`
+- Main Application File: `app.py`
+- Python Version: `3.12`
+- Deployment Platform: Streamlit Community Cloud
+
+Live application:
+
+https://rafay-loan-approval-prediction.streamlit.app
 
 ## Limitations
 
